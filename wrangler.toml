@@ -1,0 +1,10 @@
+name = "hv-mcp"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# Custom domain on the site's own zone (DNS is on Cloudflare).
+# Gives the stable public HTTPS MCP endpoint:
+#   https://mcp.highvalyriantranslators.com/mcp
+routes = [
+  { pattern = "mcp.highvalyriantranslators.com", custom_domain = true }
+]
